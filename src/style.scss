@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+$font-stack: unquote("Montserrat, sans-serif");
+$primary-color: #4285f4;
+$secondary-color: #1e3d58;
+$secondary-text-color: #fff;
+$btn-color: #3498db;
+$button-hover-color:#ff0000;
+$button-active-color: #BF0000;
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font: 16px $font-stack;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+
+    h1 {
+        padding-left: 2vw;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+        border-bottom: 3px solid #ccc;
+    }
+}
+
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw 0 2vw;
+    background:	#B1C4D5;
+    
+
+    button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: 0.5s;
+        font: 18px $font-stack;
+        color:$secondary-color;
+    }
+
+    button:hover {
+        border-bottom: 3px solid $button-hover-color;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+    }
+
+    button.active {
+        border-bottom: 3px solid $button-active-color;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+    }
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 2vw;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    min-height: 280px;
+    background-color: #fff;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+
+    .card-heading {
+        color: $secondary-color;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .break {
+            flex-basis: 100%;
+            height: 0;
+          }
+
+        .btn {
+            text-decoration: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 3px;
+            background: $btn-color;
+            font: 16px $font-stack;
+            color: #fff;
+        }
+    
+        .btn:hover {
+            background: darken($btn-color, 25%);
+            transition: all 0.3s ease;
+        }
+    
+        .input-area {
+            padding: 10px 15px;
+            margin: 10px ;
+            width: 150px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+            font: 14px $font-stack;
+        }
+    
+        .input-area:focus {
+            border: 1px solid #555;
+        }
+    
+        .result-area {
+            @extend .input-area;
+            width: 150px;
+            height: 40px;
+            
+        }   
+    }
+}

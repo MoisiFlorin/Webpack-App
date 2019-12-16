@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Awesome application</title>
+  </head>
+
+  <body>
+    
+       
+    <header class="top-bar">
+            <h1 class="top-bar-title">Assignment App</h1>
+            <div class="tab">
+                <button class="cardlinks" onclick="openOperation(event, 'div1')" id="defaultOpen">Sum of Two</button>
+                <button class="cardlinks" onclick="openOperation(event, 'div2')">Max of Three</button>
+                <button class="cardlinks" onclick="openOperation(event, 'div3')">Prime Number</button>
+                <button class="cardlinks" onclick="openOperation(event, 'div4')">Reverse String</button>
+            </div>
+        </header>
+    
+        <main>
+            <div class="main-menu">
+               
+                <div id="div1" class="card">
+                    <h2 class="card-heading">Sum of Two</h2><br>
+                    <div class="card-content">
+                        <p>Enter number 1:</p> <input class="input-area" type="number" id="number1" name="number1"
+                            value="" />
+                        <p>Enter number 2:</p> <input class="input-area" type="number" id="number2" name="number2"
+                            value="" />
+                        <input class="btn" type="button" name="Sumbit" value="Submit" onclick="sum()">
+                        <div class="break"></div>
+                        <p>The sum = </p><input class="result-area" type="text" id="answear_sum" name="answear" value=""
+                            readonly />
+                    </div>
+                </div>
+    
+                <div id="div2" class="card">
+                    <h2 class="card-heading">Greater of Three</h2><br>
+                    <div class="card-content">
+                        <p>Enter number 1:</p> <input class="input-area" type="number" id="number_max1" name="number_max1"
+                            value="">
+                        <p>Enter number 2:</p> <input class="input-area" type="number" id="number_max2" name="number_max2"
+                            value="">
+                        <p>Enter number 3:</p> <input class="input-area" type="number" id="number_max3" name="number_max3"
+                            value="">
+                        <input class="btn" type="button" value="Submit" onclick="maxOf()">
+                        <div class="break"></div>
+                        <p>The max number = </p><input class="result-area" type="text" id="answear_max" name="answear_max"
+                            value="" readonly />
+                    </div>
+                </div>
+    
+                <div id="div3" class="card">
+                    <h2 class="card-heading">Prime Number</h2><br>
+                    <div class="card-content">
+                        <p>Enter number to check if it is a prime number: </p> <input class="input-area" type="number"
+                            id="number_prime" name="number_prime" value="">
+                        <input class="btn" type="button" value="Submit" onclick="primeTest()">
+                        <div class="break"></div>
+                        <p>Result: </p>
+                        <p class="result-area" id="answear_prime"></p>
+                    </div>
+                </div>
+    
+                <div id="div4" class="card">
+                    <h2 class="card-heading">Reverse string</h2><br>
+                    <div class="card-content">
+                        <p>Enter a string:</p> <input class="input-area" type="text" id="reverse_word" name="reverse_word"
+                            value="">
+                        <input class="btn" type="button" value="Submit" onclick="reverseString()">
+                        <div class="break"></div>
+                        <p>Result: </p>
+                        <p class="result-area" id="answear_reverse"></p>
+                    </div>
+                </div>
+            </div>
+    
+        </main>
+    
+
+  <script type="text/javascript" src="main.js?45c4ebd4678318382b4c"></script></body>
+</html>
